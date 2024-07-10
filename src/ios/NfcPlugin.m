@@ -30,14 +30,8 @@
     NSLog(@"(c) 2017-2020 Don Coleman");
 
     [super pluginInitialize];
-    
-    if (@available(iOS 11, *)) {
-        if (![NFCNDEFReaderSession readingAvailable]) {
-            NSLog(@"NFC Support is NOT available");
-        }
-    } else {
-        NSLog(@"NFC Support is NOT available before iOS 11");
-    }
+    // Indicate that NFC is not supported for all iOS devices
+    NSLog(@"NFC Support is NOT available on any iOS device");
 }
 
 #pragma mark - Cordova Plugin Methods
