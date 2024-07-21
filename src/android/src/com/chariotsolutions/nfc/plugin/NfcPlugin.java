@@ -578,7 +578,7 @@ public class NfcPlugin extends CordovaPlugin implements NfcAdapter.OnNdefPushCom
     private void startNdefBeam(final CallbackContext callbackContext, final Uri[] uris) {
         getActivity().runOnUiThread(() -> {
 
-            //NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(getActivity());
+            NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(getActivity());
 
             if (nfcAdapter == null) {
                 callbackContext.error(STATUS_NO_NFC);
